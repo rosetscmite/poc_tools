@@ -4,6 +4,9 @@
 kali镜像下载地址：http://cdimage.kali.org/kali-2017.1/kali-linux-2017.1-amd64.iso  
 下载镜像后，通过vmware或vbox安装kali系统。  
 
+## 安装
+git clone 
+
 ## 运行
 首先运行install.py安装需要的组件，之后运行主程序auto_attack.py  
 目前支持的攻击方式为四种：  
@@ -13,3 +16,5 @@ kali镜像下载地址：http://cdimage.kali.org/kali-2017.1/kali-linux-2017.1-a
 4.Web dir brute attack            (网站目录扫描)  
 0.Exit                            (退出)  
 
+
+PS：使用中遇到问题或有新的需求，请联系jiaqiang_luo@hansight.com
