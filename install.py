@@ -1,4 +1,10 @@
+#!/usr/bin/python
+
 import os
 import sys
 
-os.system('apt-get install figlet -y')
+def main():
+	os.system('apt-get install figlet -y')
+
+if __name__ == '__main__':
+	main()
