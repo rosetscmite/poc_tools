@@ -1,0 +1,10 @@
+GET /aas/open/vistorAd.action?userId=97524&webSiteId=0&adInfoId=00&adBookId=0&subUserEx=347_498_0__1&vistURL=http://www.suning.com/ HTTP/1.1
+Host: union.suning.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: https://c.duomai.com/track.php?site_id=347&aid=498&euid=&t=http%3A%2F%2Fwww.suning.com%2F
+Connection: close
+Upgrade-Insecure-Requests: 1
+
