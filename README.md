@@ -13,7 +13,7 @@ git clone https://github.com/rosetscmite/poc_tools.git
 1.port scan                       (端口扫描)  
 2.brute force                     (暴力破解攻击)  
 3.Sqlinject                       (SQL注入)  
-4.Web dir brute attack            (网站目录扫描)  
+4.Web dir brute attack            (网站目录扫描)  
 5.DOS attack                      (DOS攻击)  
 0.Exit                            (退出)  
 
