@@ -17,7 +17,7 @@ git clone https://github.com/rosetscmite/poc_tools.git
 3.Sqlinject                       (SQL注入)  
 4.Web dir brute attack            (网站目录扫描)  
 5.DOS attack                      (DOS攻击)  
-6.Wanacry worm attack             (Wanacry蠕虫行为模拟)  
+6.Wanacry worm attack             (Wanacry蠕虫行为模拟)  
 0.Exit                            (退出)  
 
 
