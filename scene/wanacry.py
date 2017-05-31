@@ -26,7 +26,7 @@ def c2():
 
 
 def scan():
-    os.system('nmap -iR 1000 -P0 -n -p 455')    
+    os.system('nmap -iR 1000 -P0 -n -p 445')    
 def main():
     domain()
     c2()
