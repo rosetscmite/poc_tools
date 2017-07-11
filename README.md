@@ -22,7 +22,7 @@ cd 目录
 6.Hot case             (热点事件复现)  
 0.Exit                            (退出)  
 
-攻击包回放pcap_review.py  
+攻击包回放程序pcap_review.py  
 ```
 ./pcap_review.py
 ```  
