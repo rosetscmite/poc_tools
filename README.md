@@ -19,7 +19,7 @@ cd 目录
 3.Sqlinject                       (SQL注入)  
 4.Web dir brute attack            (网站目录扫描)  
 5.DOS attack                      (DOS攻击)  
-6.Hot case             (热点事件复现)    
+6.Hot case             (热点事件复现)  
 0.Exit                            (退出)  
 
 攻击包回放程序pcap_review.py  
