@@ -22,6 +22,10 @@ cd 目录
 6.Hot case             (热点事件复现)  
 0.Exit                            (退出)  
 
+## 出发告警需要的日志和事件
+- port scan  
+
+
 攻击包回放程序pcap_review.py  
 ```
 ./pcap_review.py
