@@ -18,9 +18,9 @@ cd 目录
 2.brute force                     (暴力破解攻击)  
 3.Sqlinject                       (SQL注入)  
 4.Web dir brute attack            (网站目录扫描)  
-5.DOS attack                      (DOS攻击)  （不建议使用，经过测试Enterprise接收不了突发大量数据）  
-6.Hot case             (热点事件复现)  
-0.Exit                            (退出)  
+5.DOS attack                      (DOS攻击)  （不建议使用，经过测试Enterprise接收不了突发大量数据）  
+99.Hot case             (热点事件复现)  
+0.Exit                            (退出)  
 
 ## 触发告警需要的日志和事件
 - port scan  
