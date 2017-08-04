@@ -24,7 +24,17 @@ cd 目录
 
 ## 出发告警需要的日志和事件
 - port scan  
-
+  - 接入日志：防火墙会话日志/防火墙访问日志  
+  - 事件：网络连接  
+- brute force  
+  - 接入日志：系统登陆日志/应用认证日志（ps：ftp等）
+  - 事件：账号登陆/ssh登陆/ftp登陆等  
+- sqlinject  
+  - 接入日志：web应用日志/WAF日志/IDS日志等  
+  - 事件：web访问/websql注入攻击/webxss攻击等（Enterprise内置WAF自动生成内部事件）  
+- web dir brute attack  
+  - 接入日志：web应用日志/WAF日志/IDS日志等  
+  - 事件：web访问
 
 攻击包回放程序pcap_review.py  
 ```
