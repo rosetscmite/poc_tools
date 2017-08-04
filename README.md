@@ -18,11 +18,11 @@ cd 目录
 2.brute force                     (暴力破解攻击)  
 3.Sqlinject                       (SQL注入)  
 4.Web dir brute attack            (网站目录扫描)  
-5.DOS attack                      (DOS攻击)  
-6.Hot case             (热点事件复现)  
+5.DOS attack                      (DOS攻击)  （不建议使用，经过测试Enterprise接收不了突发大量数据）  
+6.Hot case             (热点事件复现)  
 0.Exit                            (退出)  
 
-## 出发告警需要的日志和事件
+## 触发告警需要的日志和事件
 - port scan  
   - 接入日志：防火墙会话日志/防火墙访问日志  
   - 事件：网络连接  
@@ -35,6 +35,13 @@ cd 目录
 - web dir brute attack  
   - 接入日志：web应用日志/WAF日志/IDS日志等  
   - 事件：web访问
+- DOS attack
+  - 接入日志：防火墙会话日志
+  - 事件：网络连接
+- host case
+  - Wanacry
+   - 接入日志：DNS服务器解析日志/Hansight NTA/防火墙会话日志
+   - 事件：DNS查询/网络连接  
 
 攻击包回放程序pcap_review.py  
 ```
