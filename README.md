@@ -26,8 +26,8 @@ cd 目录
 - port scan  
   - 接入日志：防火墙会话日志/防火墙访问日志  
   - 事件：网络连接  
-- brute force  
-  - 接入日志：系统登陆日志/应用认证日志（ps：ftp等）
+- brute force   
+  - 接入日志：系统登陆日志/应用认证日志（ps：ftp等）  
   - 事件：账号登陆/ssh登陆/ftp登陆等  
 - sqlinject  
   - 接入日志：web应用日志/WAF日志/IDS日志等  
@@ -35,13 +35,13 @@ cd 目录
 - web dir brute attack  
   - 接入日志：web应用日志/WAF日志/IDS日志等  
   - 事件：web访问
-- DOS attack
-  - 接入日志：防火墙会话日志
+- DOS attack  
+  - 接入日志：防火墙会话日志  
   - 事件：网络连接  
-- host case
+- host case  
   - Wanacry  
    - 接入日志：DNS服务器解析日志/Hansight NTA/防火墙会话日志  
-   - 事件：DNS查询/网络连接   、
+   - 事件：DNS查询/网络连接  
 
 攻击包回放程序pcap_review.py  
 ```
