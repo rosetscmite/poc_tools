@@ -48,4 +48,3 @@ cd 目录
 ./pcap_review.py
 ```  
 
-PS：使用中遇到问题或有新的需求，请联系jiaqiang_luo@hansight.com
